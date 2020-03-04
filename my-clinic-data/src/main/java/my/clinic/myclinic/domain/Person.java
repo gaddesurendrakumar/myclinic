@@ -1,4 +1,4 @@
-package my.clinic.domain;
+package my.clinic.myclinic.domain;
 
 public class Person {
 

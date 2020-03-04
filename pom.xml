@@ -21,7 +21,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <start-class>my.clinic.MyclinicApplication</start-class>
+
     </properties>
 
     <dependencies>

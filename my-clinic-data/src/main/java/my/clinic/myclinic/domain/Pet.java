@@ -1,4 +1,4 @@
-package my.clinic.domain;
+package my.clinic.myclinic.domain;
 
 import java.time.LocalDate;
 
