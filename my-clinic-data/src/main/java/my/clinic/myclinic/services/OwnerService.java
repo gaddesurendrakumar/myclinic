@@ -2,12 +2,10 @@ package my.clinic.myclinic.services;
 
 import my.clinic.myclinic.domain.Owner;
 
-import java.util.Set;
 
-public interface OwnerService {
+
+public interface OwnerService extends CrudService<Owner,Long>{
 
     Owner findByLastName();
-    Owner findById(Long id);
-    Owner save(Owner owner);
-    Set<Owner> findAll();
+
 }
