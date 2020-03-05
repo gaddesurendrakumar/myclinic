@@ -1,6 +1,6 @@
 package my.clinic.myclinic.domain;
 
-public class PetType {
+public class PetType extends BaseEntity  {
 
     private String name;
 
