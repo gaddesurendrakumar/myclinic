@@ -1,11 +1,11 @@
 package my.clinic.myclinic.services.map;
 
 import my.clinic.myclinic.domain.Pet;
-import my.clinic.myclinic.services.CrudService;
+import my.clinic.myclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetMapService extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
+public class PetMapService extends AbstractMapService<Pet,Long> implements PetService{
 
     @Override
     public Pet findById(Long id) {

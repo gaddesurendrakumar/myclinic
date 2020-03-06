@@ -1,11 +1,11 @@
 package my.clinic.myclinic.services.map;
 
 import my.clinic.myclinic.domain.Owner;
-import my.clinic.myclinic.services.CrudService;
+import my.clinic.myclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerMapService extends AbstractMapService<Owner,Long> implements CrudService<Owner,Long> {
+public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService {
 
     @Override
     public Owner findById(Long id) {
@@ -30,5 +30,10 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements C
     @Override
     public void delete(Owner object) {
         super.delete(object);
+    }
+
+    @Override
+    public Owner findByLastName() {
+        return null;
     }
 }
