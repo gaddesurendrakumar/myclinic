@@ -29,7 +29,7 @@ public class DataLoader implements CommandLineRunner {
         owner1.setCity("Miami");
         owner1.setTelephone("1231231234");
         ownerService.save(owner1);
-
+        //SECOND OWNER
         Owner owner2 = new Owner();
         owner2.setId(2L);
         owner2.setFirstName("Fiona");
@@ -38,7 +38,7 @@ public class DataLoader implements CommandLineRunner {
         owner2.setCity("Miami");
         owner2.setTelephone("1231231234");
         ownerService.save(owner2);
-
+       //LOADING VETS
         System.out.println("Owners got loaded..."+ownerService.findAll().size());
         Vet vet1 = new Vet();
         vet1.setId(1L);
