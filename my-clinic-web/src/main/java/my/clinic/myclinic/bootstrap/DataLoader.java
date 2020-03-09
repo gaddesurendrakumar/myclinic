@@ -57,7 +57,6 @@ public class DataLoader implements CommandLineRunner {
         dentistry.setDescription("dentistry");
         Speciality savedDentistry = specialtyService.save(dentistry);
 
-
         Owner owner1 = new Owner();
 
         owner1.setFirstName("Michael");
@@ -74,7 +73,7 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner1);
         //SECOND OWNER
         Owner owner2 = new Owner();
-
+        
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
         owner2.setAddress("123 Brickerel");
@@ -112,7 +111,6 @@ public class DataLoader implements CommandLineRunner {
         catVisit.setDescription("Sneezy Kitty");
 
         visitService.save(catVisit);
-
 
         System.out.println("Pets got loaded..." + vetService.findAll().size());
     }
