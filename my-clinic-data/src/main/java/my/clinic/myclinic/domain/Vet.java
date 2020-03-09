@@ -17,4 +17,6 @@ public class Vet extends Person {
     public void setSpecialities(Set<Specialty> specialities) {
         this.specialities = specialities;
     }
+
+
 }
