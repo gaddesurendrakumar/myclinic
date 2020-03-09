@@ -5,7 +5,6 @@ import my.clinic.myclinic.domain.Owner;
 
 
 public interface OwnerService extends CrudService<Owner,Long>{
-
-    Owner findByLastName();
+   public Owner findByLastName(String lastName);
 
 }

@@ -66,8 +66,10 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements O
         super.delete(object);
     }
 
+
+
     @Override
-    public Owner findByLastName() {
+    public Owner findByLastName(String lastName) {
         return null;
     }
 }
