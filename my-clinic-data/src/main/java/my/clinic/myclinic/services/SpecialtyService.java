@@ -1,6 +1,6 @@
 package my.clinic.myclinic.services;
 
-import my.clinic.myclinic.domain.Specialty;
+import my.clinic.myclinic.domain.Speciality;
 
-public interface SpecialtyService extends CrudService<Specialty,Long> {
+public interface SpecialtyService extends CrudService<Speciality,Long> {
 }

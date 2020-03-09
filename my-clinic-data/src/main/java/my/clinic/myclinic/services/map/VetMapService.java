@@ -1,6 +1,6 @@
 package my.clinic.myclinic.services.map;
 
-import my.clinic.myclinic.domain.Specialty;
+import my.clinic.myclinic.domain.Speciality;
 import my.clinic.myclinic.domain.Vet;
 import my.clinic.myclinic.services.SpecialtyService;
 import my.clinic.myclinic.services.VetService;
@@ -26,7 +26,7 @@ public Vet save(Vet object) {
         if (object.getSpecialities().size() > 0){
                 object.getSpecialities().forEach(speciality -> {
                         if(speciality.getId() == null){
-                                Specialty savedSpecialty = specialtyService.save(speciality);
+                                Speciality savedSpecialty = specialtyService.save(speciality);
                                 speciality.setId(savedSpecialty.getId());
                         }
                 });
