@@ -16,9 +16,12 @@ import java.io.Serializable;
 @AllArgsConstructor
 @MappedSuperclass
 public class BaseEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    public boolean isNew() {
+        return this.id == null;
+    }
 
 }

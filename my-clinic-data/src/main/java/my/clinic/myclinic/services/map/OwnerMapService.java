@@ -22,12 +22,18 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements O
     }
 
     @Override
+    public Set<Owner> findAll() {
+        return super.findAll();
+    }
+
+    @Override
     public Owner findById(Long id) {
         return super.findById(id);
     }
 
     @Override
     public Owner save(Owner object) {
+
         if(object != null){
             if (object.getPets() != null) {
                 object.getPets().forEach(pet -> {
@@ -54,8 +60,8 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements O
     }
 
     @Override
-    public Set<Owner> findAll() {
-        return super.findAll();
+    public void delete(Owner object) {
+        super.delete(object);
     }
 
     @Override
@@ -64,14 +70,18 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements O
     }
 
     @Override
-    public void delete(Owner object) {
-        super.delete(object);
-    }
-
-
-
-    @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
     }
+
+   /* @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+
+        //todo - impl
+        return null;
+    }*/
 }
