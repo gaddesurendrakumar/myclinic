@@ -11,7 +11,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
-@Table(name = "ownners")
+@Table(name = "owners")
 public class Owner extends  Person {
     public Owner() {
     }
