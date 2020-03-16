@@ -1,9 +1,15 @@
 package my.clinic.myclinic.controllers;
 
+import my.clinic.myclinic.domain.Vet;
 import my.clinic.myclinic.services.VetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Set;
+
 @RequestMapping()
 @Controller()
 public class VetsController {
@@ -22,5 +28,10 @@ private final VetService vetService;
     @RequestMapping("/find")
     public String findOwner(){
         return "notimplemented";
+    }
+
+    @GetMapping(value = "/api/vets")
+    public @ResponseBody Set<Vet> listAllVets(){
+        return vetService.findAll();
     }
 }
